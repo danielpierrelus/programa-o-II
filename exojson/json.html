@@ -1,12 +1,14 @@
 <html>
 
 <body>
+    <button id="btn"> busca os dados</button>
 
     <script>
-        fetch('index.php')
-        then(Response => Response.json())
-        then(dados => console.log(dados.idade));
-        then(dados => console.log(dados.nome));
+        document.getElementById('btn').addEventListener('click', () => {
+            fetch('index.php')
+            .then(Response => Response.json())
+            .then(dados => {console.log(dados.idade); console.log(dados.nome)});
+        })
 
         document.getElementById("teste").innerHTML=dados.nome;
 
@@ -14,4 +16,3 @@
     </script>
 </body>
 </html>
-    <a href="index.php"> busca os dados</a>
