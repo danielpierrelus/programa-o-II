@@ -5,9 +5,13 @@
     <script>
         fetch('index.php')
         then(Response => Response.json())
-        then(dados => console.log(dados));
-        
+        then(dados => console.log(dados.idade));
+        then(dados => console.log(dados.nome));
+
         document.getElementById("teste").innerHTML=dados.nome;
+
+        
     </script>
 </body>
 </html>
+    <a href="index.php"> busca os dados</a>
